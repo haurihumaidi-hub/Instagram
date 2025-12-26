@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Bio Instagram</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 28px;
+            background: linear-gradient(90deg, #405DE6, #833AB4, #FD1D1D);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 5px;
+        }
+        
+        .bio {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 20px;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 15px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-weight: 700;
+            font-size: 22px;
+            color: #405DE6;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .buttons-container {
+            margin-bottom: 40px;
+        }
+        
+        .buttons-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .link-button {
+            display: flex;
+            align-items: center;
+            padding: 18px 25px;
+            background: white;
+            border-radius: 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .link-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            border-color: #833AB4;
+        }
+        
+        .button-icon {
+            margin-right: 15px;
+            font-size: 24px;
+            width: 30px;
+            text-align: center;
+        }
+        
+        .button-text {
+            flex-grow: 1;
+        }
+        
+        .button-arrow {
+            color: #833AB4;
+            font-size: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .link-button:hover .button-arrow {
+            opacity: 1;
+        }
+        
+        .customize-panel {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 25px;
+            margin-top: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .customize-panel h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #405DE6;
+            text-align: center;
+        }
+        
+        .customize-form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+            font-size: 14px;
+        }
+        
+        .form-group input {
+            padding: 12px 15px;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #833AB4;
+        }
+        
+        .save-button {
+            background: linear-gradient(90deg, #405DE6, #833AB4);
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            letter-spacing: 1px;
+        }
+        
+        .save-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(131, 58, 180, 0.3);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: #777;
+            font-size: 14px;
+            width: 100%;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #833AB4;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+            background: linear-gradient(90deg, #405DE6, #833AB4);
+            color: white;
+        }
+        
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #4CAF50;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 1000;
+            animation: slideIn 0.5s ease;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @media (min-width: 768px) {
+            .customize-form {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+        }
+        
+        .instagram-gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #405DE6, #833AB4, #FD1D1D, #F56040, #FFDC80);
+        }
+        
+        .instagram-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .instagram-icon {
+            color: #E1306C;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="instagram-gradient"></div>
+            <img src="https://images.unsplash.com/photo-1494790108755-2616b786d4d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Profile Picture" class="profile-img">
+            <div class="instagram-header">
+                <i class="fab fa-instagram instagram-icon"></i>
+                <h1>@your_username</h1>
+            </div>
+            <p class="bio">Digital Creator | Content Writer | Lifestyle Blogger. Welcome to my official link page! ✨</p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">10K+</div>
+                    <div class="stat-label">Followers</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">150</div>
+                    <div class="stat-label">Posts</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">45</div>
+                    <div class="stat-label">Videos</div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="buttons-container">
+            <div class="buttons-list" id="buttonsList">
+                <!-- Tombol akan dimuat via JavaScript -->
+            </div>
+        </div>
+        
+        <div class="customize-panel">
+            <h2><i class="fas fa-edit"></i> Kustomisasi Tombol</h2>
+            <p style="text-align: center; margin-bottom: 20px; color: #666;">Ubah nama 10 tombol sesuai keinginan Anda</p>
+            
+            <div class="customize-form" id="customizeForm">
+                <!-- Form input akan dimuat via JavaScript -->
+            </div>
+            
+            <button class="save-button" id="saveButton">
+                <i class="fas fa-save"></i> Simpan Perubahan
+            </button>
+            
+            <div style="text-align: center; margin-top: 15px; font-size: 13px; color: #888;">
+                <i class="fas fa-info-circle"></i> Klik tombol untuk menyalin URL yang sudah ditentukan
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 Link Bio Instagram. All rights reserved.</p>
+            <p>Designed with <i class="fas fa-heart" style="color: #e91e63;"></i> for Instagram creators</p>
+            
+            <div class="social-icons">
+                <a href="#" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </footer>
+    </div>
+    
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i> Perubahan berhasil disimpan!
+    </div>
+
+    <script>
+        // Data awal untuk 10 tombol
+        const initialButtons = [
+            { id: 1, name: "Portfolio Website", icon: "fas fa-globe", color: "#405DE6", url: "https://example.com/portfolio" },
+            { id: 2, name: "YouTube Channel", icon: "fab fa-youtube", color: "#FF0000", url: "https://youtube.com/@yourchannel" },
+            { id: 3, name: "TikTok Profile", icon: "fab fa-tiktok", color: "#000000", url: "https://tiktok.com/@yourprofile" },
+            { id: 4, name: "Latest Blog Post", icon: "fas fa-blog", color: "#833AB4", url: "https://yourblog.com/latest" },
+            { id: 5, name: "Online Store", icon: "fas fa-shopping-cart", color: "#FD1D1D", url: "https://store.yourwebsite.com" },
+            { id: 6, name: "Podcast", icon: "fas fa-podcast", color: "#F56040", url: "https://podcast.yourwebsite.com" },
+            { id: 7, name: "E-book Gratis", icon: "fas fa-book", color: "#FFDC80", url: "https://yourwebsite.com/free-ebook" },
+            { id: 8, name: "Donasi", icon: "fas fa-heart", color: "#E1306C", url: "https://buymeacoffee.com/yourprofile" },
+            { id: 9, name: "Contact Me", icon: "fas fa-envelope", color: "#4CAF50", url: "mailto:you@example.com" },
+            { id: 10, name: "Link Tree", icon: "fas fa-tree", color: "#8A2BE2", url: "https://linktr.ee/yourprofile" }
+        ];
+
+        // Load data dari localStorage atau gunakan data awal
+        let buttons = JSON.parse(localStorage.getItem('instagramButtons')) || initialButtons;
+
+        // Fungsi untuk merender tombol
+        function renderButtons() {
+            const buttonsList = document.getElementById('buttonsList');
+            buttonsList.innerHTML = '';
+            
+            buttons.forEach(button => {
+                const buttonElement = document.createElement('a');
+                buttonElement.href = "#";
+                buttonElement.className = "link-button";
+                buttonElement.setAttribute('data-id', button.id);
+                buttonElement.innerHTML = `
+                    <div class="button-icon" style="color: ${button.color}">
+                        <i class="${button.icon}"></i>
+                    </div>
+                    <div class="button-text">${button.name}</div>
+                    <div class="button-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                `;
+                
+                // Tambahkan event listener untuk tombol
+                buttonElement.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const buttonId = this.getAttribute('data-id');
+                    const buttonData = buttons.find(b => b.id == buttonId);
+                    
+                    // Tampilkan dialog untuk mengedit URL
+                    const newUrl = prompt(`Masukkan URL untuk tombol "${buttonData.name}":`, buttonData.url);
+                    if (newUrl !== null) {
+                        buttonData.url = newUrl;
+                        localStorage.setItem('instagramButtons', JSON.stringify(buttons));
+                        showNotification(`URL untuk "${buttonData.name}" berhasil diubah!`);
+                    }
+                });
+                
+                buttonsList.appendChild(buttonElement);
+            });
+        }
+
+        // Fungsi untuk merender form kustomisasi
+        function renderCustomizeForm() {
+            const customizeForm = document.getElementById('customizeForm');
+            customizeForm.innerHTML = '';
+            
+            buttons.forEach(button => {
+                const formGroup = document.createElement('div');
+                formGroup.className = 'form-group';
+                formGroup.innerHTML = `
+                    <label for="button${button.id}">Tombol ${button.id}:</label>
+                    <input 
+                        type="text" 
+                        id="button${button.id}" 
+                        value="${button.name}" 
+                        data-id="${button.id}"
+                        placeholder="Masukkan nama tombol"
+                    >
+                `;
+                
+                customizeForm.appendChild(formGroup);
+            });
+        }
+
+        // Fungsi untuk menampilkan notifikasi
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            notification.innerHTML = `<i class="fas fa-check-circle"></i> ${message}`;
+            notification.style.display = 'block';
+            
+            // Sembunyikan notifikasi setelah 3 detik
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+
+        // Fungsi untuk menyimpan perubahan
+        function saveChanges() {
+            // Update nama tombol berdasarkan input form
+            buttons.forEach(button => {
+                const input = document.getElementById(`button${button.id}`);
+                const newName = input.value.trim();
+                if (newName) {
+                    button.name = newName;
+                }
+            });
+            
+            // Simpan ke localStorage
+            localStorage.setItem('instagramButtons', JSON.stringify(buttons));
+            
+            // Update tampilan tombol
+            renderButtons();
+            
+            // Tampilkan notifikasi
+            showNotification('Perubahan berhasil disimpan!');
+        }
+
+        // Fungsi untuk reset ke pengaturan awal
+        function resetToDefault() {
+            if (confirm('Apakah Anda yakin ingin mengembalikan ke pengaturan awal? Semua perubahan akan hilang.')) {
+                buttons = [...initialButtons];
+                localStorage.removeItem('instagramButtons');
+                renderButtons();
+                renderCustomizeForm();
+                showNotification('Berhasil dikembalikan ke pengaturan awal!');
+            }
+        }
+
+        // Event listener untuk tombol simpan
+        document.getElementById('saveButton').addEventListener('click', saveChanges);
+
+        // Tambahkan tombol reset
+        const resetButton = document.createElement('button');
+        resetButton.innerHTML = '<i class="fas fa-undo"></i> Reset ke Default';
+        resetButton.style.cssText = 'background: transparent; color: #666; border: 1px solid #ddd; padding: 12px; border-radius: 10px; font-family: "Poppins", sans-serif; font-size: 14px; cursor: pointer; margin-top: 10px; width: 100%; transition: all 0.3s ease;';
+        resetButton.addEventListener('mouseover', function() {
+            this.style.backgroundColor = '#f8f8f8';
+        });
+        resetButton.addEventListener('mouseout', function() {
+            this.style.backgroundColor = 'transparent';
+        });
+        resetButton.addEventListener('click', resetToDefault);
+        
+        document.querySelector('.customize-panel').appendChild(resetButton);
+
+        // Inisialisasi halaman
+        renderButtons();
+        renderCustomizeForm();
+
+        // Tambahkan event listener untuk setiap input agar bisa menyimpan dengan Enter
+        document.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter' && (event.target.tagName === 'INPUT')) {
+                saveChanges();
+            }
+        });
+
+        // Animasi untuk tombol saat dihover
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tambahkan animasi untuk header
+            const header = document.querySelector('header');
+            header.style.opacity = '0';
+            header.style.transform = 'translateY(-20px)';
+            
+            setTimeout(() => {
+                header.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                header.style.opacity = '1';
+                header.style.transform = 'translateY(0)';
+            }, 300);
+        });
+    </script>
+</body>
+</html>
